@@ -18,6 +18,10 @@ resource "aws_instance" "example" {
 	}
 }
 
+output "public_ip" {
+	value = "${aws_instance.example.public_ip"
+}
+
 resource "aws_security_group" "instance" {
 	name = "terraform-example-instance-sg"
 
